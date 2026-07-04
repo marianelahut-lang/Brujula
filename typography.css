@@ -41,3 +41,83 @@ h1 {
   font-size: 1.9rem;
   font-weight: 500;
 }
+
+.brand-logo {
+  height: 34px;
+  width: 34px;
+}
+
+.hero-logo {
+  margin: 0 auto 26px;
+  max-width: min(720px, 92vw);
+  width: 100%;
+}
+
+.hero-compass {
+  display: none;
+}
+
+.logo-system {
+  background: var(--paper);
+}
+
+.logo-variants {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 1.15fr 1.15fr 0.7fr;
+  margin: 0 auto;
+  max-width: var(--max);
+}
+
+.logo-variants article {
+  align-items: center;
+  background: #ebe8de;
+  border: 1px solid var(--line);
+  display: grid;
+  min-height: 330px;
+  padding: clamp(24px, 4vw, 46px);
+}
+
+.logo-variants article.dark {
+  background: var(--navy);
+}
+
+.logo-variants article.dark img {
+  filter: brightness(0) invert(1) sepia(0.2) saturate(0.4);
+  opacity: 0.96;
+}
+
+.logo-variants img {
+  justify-self: center;
+  max-height: 230px;
+  width: min(100%, 420px);
+}
+
+.logo-variants .seal {
+  max-height: 170px;
+  width: 170px;
+}
+
+.logo-variants p {
+  align-self: end;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 24px 0 0;
+  text-transform: uppercase;
+}
+
+.logo-variants article.dark p {
+  color: var(--gold);
+}
+
+@media (max-width: 820px) {
+  .logo-variants {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-variants article {
+    min-height: 260px;
+  }
+}
