@@ -145,86 +145,72 @@ h1 {
   display: none;
 }
 
-.identity-feature {
-  background:
-    radial-gradient(circle at 18% 50%, rgba(195, 178, 136, 0.18), transparent 24%),
-    linear-gradient(135deg, var(--navy), #071829 78%);
-  color: var(--paper);
+.identity-institutional {
+  background: var(--paper);
+}
+
+.identity-institutional .section-heading {
+  border-bottom: 1px solid rgba(15, 36, 62, 0.14);
+  padding-bottom: clamp(34px, 5vw, 56px);
+}
+
+.identity-institutional .section-heading h2 {
+  font-size: clamp(2rem, 4vw, 4.35rem);
+  line-height: 1.04;
+  max-width: 1020px;
+}
+
+.institutional-panel {
   display: grid;
-  gap: clamp(28px, 5vw, 70px);
-  grid-template-columns: 0.55fr 1.15fr 0.55fr;
-  min-height: 560px;
-  overflow: hidden;
-  padding: clamp(72px, 10vw, 128px) clamp(20px, 5vw, 72px);
-  position: relative;
+  gap: clamp(34px, 6vw, 78px);
+  grid-template-columns: 0.82fr 1.18fr;
+  margin: 0 auto;
+  max-width: var(--max);
 }
 
-.identity-feature::after {
-  background:
-    linear-gradient(90deg, rgba(195, 178, 136, 0.2) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(195, 178, 136, 0.16) 1px, transparent 1px);
-  background-size: 120px 120px;
-  content: "";
-  inset: 0;
-  opacity: 0.12;
-  position: absolute;
-}
-
-.identity-mark,
-.identity-copy,
-.identity-points {
-  position: relative;
-  z-index: 1;
-}
-
-.identity-mark {
-  align-self: center;
-  justify-self: center;
-}
-
-.identity-mark img {
-  filter: drop-shadow(0 22px 36px rgba(0, 0, 0, 0.26));
-  opacity: 0.92;
-  width: clamp(150px, 18vw, 250px);
-}
-
-.identity-copy {
-  align-self: center;
-  border-left: 1px solid rgba(195, 178, 136, 0.42);
-  padding-left: clamp(28px, 5vw, 72px);
-}
-
-.identity-copy h2 {
-  color: var(--paper);
-  font-size: clamp(3.1rem, 7vw, 7.8rem);
-  line-height: 0.92;
-  margin-bottom: 28px;
-  max-width: 900px;
-}
-
-.identity-copy p:not(.eyebrow) {
-  color: rgba(242, 239, 230, 0.76);
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
+.institutional-panel > p {
+  color: rgba(15, 36, 62, 0.74);
+  font-size: clamp(1rem, 1.45vw, 1.16rem);
+  line-height: 1.85;
   margin: 0;
-  max-width: 560px;
 }
 
-.identity-points {
-  align-self: end;
+.institutional-pillars {
+  border-top: 1px solid rgba(15, 36, 62, 0.14);
   display: grid;
-  gap: 18px;
-  justify-self: stretch;
+  gap: 0;
 }
 
-.identity-points span {
-  border-top: 1px solid rgba(195, 178, 136, 0.46);
+.institutional-pillars article {
+  border-bottom: 1px solid rgba(15, 36, 62, 0.14);
+  display: grid;
+  gap: clamp(20px, 4vw, 54px);
+  grid-template-columns: 70px 190px 1fr;
+  padding: 24px 0;
+}
+
+.institutional-pillars span {
   color: var(--gold);
-  font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
-  padding-top: 18px;
+  letter-spacing: 0.18em;
+}
+
+.institutional-pillars h3 {
+  color: var(--navy);
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  margin: 0;
   text-transform: uppercase;
+}
+
+.institutional-pillars p {
+  color: rgba(15, 36, 62, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.72;
+  margin: 0;
 }
 
 .values-strip {
@@ -293,10 +279,6 @@ h1 {
 }
 
 @media (max-width: 820px) {
-  .identity-feature {
-    grid-template-columns: 1fr;
-  }
-
   .manifesto-editorial {
     grid-template-columns: 1fr;
   }
@@ -327,11 +309,13 @@ h1 {
     padding-left: 0;
   }
 
-  .identity-copy {
-    border-left: 0;
-    border-top: 1px solid rgba(195, 178, 136, 0.42);
-    padding-left: 0;
-    padding-top: 32px;
+  .institutional-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-pillars article {
+    gap: 10px;
+    grid-template-columns: 1fr;
   }
 
   .values-strip {
