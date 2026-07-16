@@ -35,3 +35,17 @@ const observer = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => observer.observe(item));
+
+
+const proposalLinks = document.querySelectorAll("[data-proposal]");
+const messageField = document.querySelector('textarea[name="mensaje"]');
+
+proposalLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const proposal = link.dataset.proposal;
+    if (messageField && !messageField.value.trim()) {
+      messageField.value = `Hola, me interesa conocer la propuesta de comunicación para ${proposal}.`;
+    }
+    window.setTimeout(() => messageField?.focus({ preventScroll: true }), 450);
+  });
+});
